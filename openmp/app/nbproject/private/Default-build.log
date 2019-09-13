@@ -1,0 +1,7 @@
+rm -fr *.o a.out programa dist build
+mkdir -p build dist
+g++ -g3 -Wall -c main.cpp -o build/main.o
+g++ -g3 -Wall -c menu.cpp -o build/menu.o
+g++ -g3 -Wall -c Matriz.cpp -o build/Matriz.o
+g++ -g3 -Wall -lm -o dist/programa build/main.o build/menu.o build/Matriz.o
+rm -fr build
